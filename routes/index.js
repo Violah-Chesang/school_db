@@ -1,14 +1,19 @@
 const express = require('express');
+const studentModel = require('../models/studentModel');
 
 const router = express.Router();
+router.use(studentModel);
 
 
 router.get('/login', (req, res) => {
+    //hit db from here
     res.render('index');
 })
 
+
 router.post('/submit-form', (req, res) => {
     let formData = req.body;
+    Student.save(formData);
     console.log(formData);
     res.send('Submitted successfully!')
 })

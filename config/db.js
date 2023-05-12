@@ -5,7 +5,6 @@ function getMongodbConnection(){
 
     //create a connection
     mongoose.connect(DB_URL);
-
     const db = mongoose.connection;
 
     db.once('open', ()=> {
