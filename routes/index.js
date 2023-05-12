@@ -2,7 +2,6 @@ const express = require('express');
 const studentModel = require('../models/studentModel');
 
 const router = express.Router();
-router.use(studentModel);
 
 
 router.get('/login', (req, res) => {
@@ -12,7 +11,7 @@ router.get('/login', (req, res) => {
 
 router.post('/submit-form', (req, res) => {
     let formData = req.body;
-    Student.save(formData);
+    studentModel.save(formData);
     console.log(formData);
     res.send('Submitted successfully!')
 })
