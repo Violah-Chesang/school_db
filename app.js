@@ -6,7 +6,7 @@ const router = require('./routes/index');
 
 const app = express();
 
-app.use(express.json());
+app.use(express.urlencoded());
 app.use(router);
 
 app.set('view engine', 'ejs')

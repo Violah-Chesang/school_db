@@ -6,7 +6,6 @@ router.use(studentModel);
 
 
 router.get('/login', (req, res) => {
-    //hit db from here
     res.render('index');
 })
 
