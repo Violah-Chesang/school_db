@@ -11,6 +11,8 @@ app.use(router);
 
 app.set('view engine', 'ejs')
 
-app.listen(4000, () => {
-    console.log('The server has started');
+const PORT = process.env.PORT || 4000
+
+app.listen(PORT, () => {
+    console.log(`The server has started at port ${PORT}`);
 });
