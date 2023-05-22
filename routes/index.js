@@ -21,7 +21,7 @@ router.post('/submit-form', (req, res) => {
     newstudent.save();
 
     //once data is saved then go back to an empty form
-    res.redirect('/student-registration')
+    res.redirect('/')
 });
 
 //read a record in the server.
