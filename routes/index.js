@@ -4,7 +4,7 @@ const Student = require('../models/studentModel');
 const router = express.Router();
 
 //displays registration form on the browser
-router.get('/student-registration', (req, res) => {
+router.get('/', (req, res) => {
     res.render('index');
 })
 
