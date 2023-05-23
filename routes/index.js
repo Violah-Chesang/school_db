@@ -3,8 +3,13 @@ const Student = require('../models/studentModel');
 
 const router = express.Router();
 
-//displays registration form on the browser
+//display the home page
 router.get('/', (req, res) => {
+    res.render('home');
+})
+
+//displays registration form on the browser
+router.get('/student-registration', (req, res) => {
     res.render('index');
 })
 
@@ -21,7 +26,7 @@ router.post('/submit-form', (req, res) => {
     newstudent.save();
 
     //once data is saved then go back to an empty form
-    res.redirect('/')
+    res.redirect('/student-registration')
 });
 
 //read a record in the server.
